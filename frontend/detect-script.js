@@ -1,7 +1,7 @@
 // OsteoDetect - Frontend Script
 document.addEventListener('DOMContentLoaded', function() {
-    // Backend API URL - update this to match your server address
-    const API_URL = 'http://localhost:8000';
+    // Backend API URL - deployed Railway backend
+    const API_URL = 'https://osteodetect-ai-production.up.railway.app';
     
     // Elements
     const dropArea = document.getElementById('drop-area');
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .catch(error => {
                 console.error('Server connection error:', error);
-                alert('Warning: Could not connect to detection server. Please make sure the backend server is running.');
+                // Backend is hosted; do not interrupt users with an alert.
             });
     }
 });
