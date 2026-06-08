@@ -55,7 +55,7 @@ os.makedirs("results/gradcam", exist_ok=True)
 try:
     logger.info("Loading YOLOv8 model...")
     logger.info(f"Ultralytics version: {ultralytics.__version__}")
-    model = YOLO('models/model.pt')
+    model = YOLO('backend/models/model.pt')
     logger.info("Model loaded successfully.")
 except Exception as e:
     logger.error(f"Error loading model: {e}")
