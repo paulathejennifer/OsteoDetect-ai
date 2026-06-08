@@ -2,13 +2,9 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install system dependencies needed for Python imaging and OpenCV
-# Use only packages available in Debian Trixie
+# Install system dependencies needed for build and headless CV/ML operations
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libsm6 \
-    libxext6 \
-    libxrender-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy only Python dependency definitions first to cache installs
