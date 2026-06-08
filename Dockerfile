@@ -5,6 +5,11 @@ WORKDIR /app
 # Install system dependencies needed for build and headless CV/ML operations
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    libglib2.0-0 \
+    libgomp1 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy only Python dependency definitions first to cache installs
